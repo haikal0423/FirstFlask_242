@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Input Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <a href="/" class="logo">FlaskApp</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <div class="container">
+            <h1>Input Form</h1>
+            <form method="POST" action="/">
+                <label for="input_data">Enter Text:</label>
+                <input type="text" id="input_data" name="input_data" required>
+                <button type="submit">Submit</button>
+            </form>
+
+            {% if result %}
+                <div class="result">
+                    <p>{{ result }}</p>
+                </div>
+            {% endif %}
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 FlaskApp - All Rights Reserved</p>
+    </footer>
+</body>
+</html>
